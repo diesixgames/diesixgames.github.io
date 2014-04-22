@@ -1,4 +1,4 @@
-<!--LAYOUT VARIABLES--><!--append this block to override the variables--><!--MIXINS--><!--it is advised to use this instead of raw anchors--><!--ACTUAL CONTENTS HERE--><h1><a href="index.html">Notodeim</a></h1><ul><li><a href="synopsis.html">synopsis</a></li><li><a href="howto.html">howto</a></li><li><a href="units.html">units</a></li></ul><hr/><p><p>Hey there, Notordeim is a very fun game based around fast-paced miniature
+<!--LAYOUT VARIABLES--><!--append this block to override the variables--><!--MIXINS--><!--it is advised to use this instead of raw anchors--><!DOCTYPE html><html lang="en"><head><title>Notodeim</title><link rel="stylesheet" href="style.css" type="text/css"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script></head><body><!--ACTUAL CONTENTS HERE--><div class="header"><h1><a href="index.html">Notodeim</a></h1><ul class="menu"><li><a href="synopsis.html">synopsis</a></li><li><a href="howto.html">howto</a></li><li><a href="units.html">units</a></li></ul></div><hr><div class="body"><div class="contents"><p><p>Hey there, Notordeim is a very fun game based around fast-paced miniature
 skirmish game.
 You are commanding a looting crew of 3-5 characters to enter a
 multi-entranced dungeon to claim its loot. Depends on playstyles that the
@@ -7,4 +7,14 @@ crew could be divided into multiple factions.</p>
 loser brackets. For every winning round, a gameplay-affecting loot is
 rewarded to the winner. The player may use it for their next round or save
 them to use all together at the end.</p>
-</p><p>Copyright Diesix games</p>
+</p></div><iframe id="reference"></iframe></div><div class="footer"><p>Copyright Diesix gattr</p></div><script>$(document).ready(function() {
+
+  $('#reference').hide();
+  
+  $('.unit_ref').mouseenter(function(event) {
+    var url = "./units/" + event.target.textContent + ".html";
+    $('#reference').attr("src", url).show();
+  }).mouseleave(function(event) {
+    $('#reference').removeAttr("src").hide();
+  });
+});</script></body></html>
