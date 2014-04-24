@@ -1,11 +1,52 @@
-<!--LAYOUT VARIABLES--><!--append this block to override the variables--><!--MIXINS--><!--it is advised to use this instead of raw anchors--><!DOCTYPE html><html lang="en"><head><title>Notodeim</title><link rel="stylesheet" href="style.css" type="text/css"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script></head><body><!--ACTUAL CONTENTS HERE--><div class="header"><h1><a href="index.html">Notodeim</a></h1><ul class="menu"><li><a href="synopsis.html">synopsis</a></li><li><a href="howto.html">howto</a></li><li><a href="units.html">units</a></li></ul></div><hr><div class="body"><div class="contents"><p></p></div><iframe id="reference"></iframe></div><div class="footer"><p>Copyright Diesix gattr</p></div><script>$(document).ready(function() {
+<!--LAYOUT VARIABLES--><!--append this block to override the variables--><!--MIXINS--><!--it is advised to use this instead of raw anchors--><!DOCTYPE html><html lang="en"><head><title>Notodeim</title><link rel="stylesheet" href="style.css" type="text/css"/><link rel="stylesheet" href="general.css" type="text/css"/><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script></head><body><!--ACTUAL CONTENTS HERE--><div class="header"><h1><a href="index.html">Notodeim</a></h1><ul class="menu"><li><a href="synopsis.html">synopsis</a></li><li><a href="howto.html">howto</a></li><li><a href="units.html">units</a></li></ul><div class="clear_both"></div></div><div class="body"><div class="contents"><p><h1 id="how-to-play">HOW TO PLAY</h1>
+<h2 id="using-the-site">Using the site</h2>
+<ol>
+<li><p>The <a href="howto.html">howto</a> is a good place to reference for all the
+general rules.</p>
+</li>
+<li><p>The <a href="synopsis.html">synopsis</a> should have more eyes candies and
+everything else, should it be moved to index instead?</p>
+</li>
+<li><p>Throughout the sites, there should be reference links such as
+<span class="unit_ref">hanna</span> which could be hovered on to expand card.</p>
+</li>
+</ol>
+<h2 id="building-your-party">Building your party</h2>
+<ol>
+<li><p>Choose a banner: banners matters a lot in this troubled times;
+heroes rally to causes, whether its faith, glory or riches, besure to
+select the right banner to assembles the parties you deemed fit.
+A banner&#39;s stats:</p>
+<ol>
+<li><p>Points available: the total point value of recruited units
+should not surpass the banner&#39;s points available.</p>
+</li>
+<li><p>Starting wealth: the available gold at the start of the game.</p>
+</li>
+<li><p>Special rule: each banner has a specific rule to enforce on its
+units and general gameplays.</p>
+</li>
+</ol>
+</li>
+<li><p>Recruit units: given a banner, you should be able to filter a
+list of available units. Each unit has a point value, as used to fit
+within the banner&#39;s limit. <br>
+Heads over to the <a href="units.html">units</a> sections for the complete references
+to all units.</p>
+</li>
+<li><p>Spending gold on upgrades: upgrades are variance of a unit that can
+be allowed to be unlocked using the starting wealth.</p>
+</li>
+</ol>
+</p></div><div id="reference"></div><div class="clear_both"></div></div><div class="footer"><p>Copyright Diesix gattr</p></div><script>$(document).ready(function() {
 
   $('#reference').hide();
   
   $('.unit_ref').mouseenter(function(event) {
     var url = "./units/" + event.target.textContent + ".html";
-    $('#reference').attr("src", url).show();
+    $('#reference').load(url).show();
+    
   }).mouseleave(function(event) {
-    $('#reference').removeAttr("src").hide();
+    $('#reference').hide();
   });
 });</script></body></html>

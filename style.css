@@ -113,6 +113,11 @@ a {
   padding: 0;
   vertical-align: baseline;
 }
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
 ins {
   background-color: #ff9;
   color: #000;
@@ -148,18 +153,10 @@ input,
 select {
   vertical-align: middle;
 }
-.body {
-  padding: 15px;
-}
-.contents {
+#reference {
+  margin-left: 20px;
   min-height: 800px;
   float: left;
-  width: 48%;
-  font-size: 85%;
-}
-#reference {
-  min-height: 800px;
-  float: right;
   width: 280px;
 }
 .footer {
