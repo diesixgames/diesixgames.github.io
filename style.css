@@ -112,6 +112,7 @@ a {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
+  text-decoration: none;
 }
 a:visited,
 a:hover,
@@ -154,15 +155,14 @@ select {
   vertical-align: middle;
 }
 #reference {
-  margin-left: 20px;
   min-height: 800px;
-  float: left;
+  float: right;
   width: 280px;
 }
 .footer {
   clear: both;
 }
-.unit_ref {
+.ref {
   display: inline;
   font-size: 85%;
   padding: 2px 6px;
@@ -179,44 +179,64 @@ select {
 .card {
   font-size: 75%;
   max-width: 280px;
-  background-color: #f0f0f0;
+  background-color: #eee;
   font-family: Sans-Serif;
   color: #333;
   padding: 5px 0;
   border-radius: 6px;
 }
+.card img {
+  width: 280px;
+  height: 150px;
+}
+.card #card_overlay {
+  position: relative;
+  top: -172px;
+  margin-bottom: -160px;
+}
 .card h1 {
   text-transform: capitalize;
-  font-size: 110%;
+  font-size: 100%;
   display: block;
   width: 270px;
-  background-color: #bbb;
-  color: #f0f0f0;
+  color: #aaa;
   padding: 5px;
-  margin: 5px 0;
+  margin: 15px 0 5px;
+  border-top: 1px dashed #aaa;
 }
 .card h2 {
-  font-size: 120%;
+  color: #666;
+  display: inline-block;
+  font-size: 100%;
   text-transform: capitalize;
   text-align: center;
   width: 260px;
-  margin: 10px 5px;
+  margin: 5px;
 }
 .card blockquote {
+  font-size: 85%;
   display: block;
   width: 270px;
   text-align: right;
   font-family: Serif;
   font-style: italic;
   color: #333;
-  padding: 5px;
+  padding: 3px 5px;
+}
+.card ul {
+  display: inline-block;
 }
 .card li {
+  font-size: 80%;
+  font-weight: bold;
   display: inline-block;
-  padding: 4px 2px;
-  margin: 3px;
+  padding: 4px 5px 2px;
+  margin: 0 3px 0 3px;
   background-color: #fff;
   color: #666;
   border: 1px solid #888;
   border-radius: 4px;
+}
+.card p {
+  padding: 5px 10px;
 }

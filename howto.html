@@ -8,14 +8,14 @@ general rules.</p>
 everything else, should it be moved to index instead?</p>
 </li>
 <li><p>Throughout the sites, there should be reference links such as
-<span class="unit_ref">hanna</span> which could be hovered on to expand card.</p>
+<span class="ref" type="">hanna</span> which could be hovered on to expand card.</p>
 </li>
 </ol>
 <h2 id="building-your-party">Building your party</h2>
 <ol>
-<li><p>Choose a banner: banners matters a lot in this troubled times;
-heroes rally to causes, whether its faith, glory or riches, besure to
-select the right banner to assembles the parties you deemed fit.
+<li><p><a href=".#banner-list">Choose a banner</a>: banners matters a lot in this
+troubled times; heroes rally to causes, whether its faith, glory or riches,
+besure to select the right banner to assembles the parties you deemed fit.
 A banner&#39;s stats:</p>
 <ol>
 <li><p>Points available: the total point value of recruited units
@@ -38,15 +38,56 @@ to all units.</p>
 be allowed to be unlocked using the starting wealth.</p>
 </li>
 </ol>
+<h2 id="banner-list">Banner list</h2>
+<ol>
+<li><p>White: driven by virtue, white promote protection and colaboration.
+After all that adventures and losses, we are deemed to realize something..
+friendship?</p>
+<ul>
+<li>Unit list: <span class="ref" type="">boris</span></li>
+<li>Point limit: 22pts</li>
+<li>Starting wealth: 250gp</li>
+<li>Hope abundance: after every encounter, choose one: restore 1hit
+or restore 1pow each.</li>
+</ul>
+</li>
+<li><p>Magenta: driven by devotion, magenta promote greater cause and passion
+for faith. Magenta is held by a charismatic figure to led the party.</p>
+<ul>
+<li>Unit list: <span class="ref" type="units">Maien</span></li>
+<li>Point limit: 30pts</li>
+<li>Starting wealth: 200gp</li>
+<li>Driven by Exemplar: choose a unit to be the banner bearer, he gains
+<span class="ref" type="rules">lead by example</span>.</li>
+</ul>
+</li>
+<li><p>Platinum: driven by martial pride, platinum promote hard-earned
+victories and sacrifice. Let</p>
+</li>
+</ol>
 </p></div><div id="reference"></div><div class="clear_both"></div></div><div class="footer"><p>Copyright Diesix gattr</p></div><script>$(document).ready(function() {
-
-  $('#reference').hide();
+  var reference_hide_css = { opacity: 0, "margin-right": -20 };
+  var reference_show_css = { opacity: 1, "margin-right": 0 };
   
-  $('.unit_ref').mouseenter(function(event) {
-    var url = "./units/" + event.target.textContent + ".html";
-    $('#reference').load(url).show();
+  $('#reference').animate(reference_hide_css, 0);
+  
+  $('.ref').mouseenter(function(event) {
+  
+    var name = event.target.textContent.toLowerCase().replace(/\ /g, '-');
+    var dir = $(this).attr('type');
+    dir = dir == ""? "units" : dir;
+    var url = "./" + dir + "/" + name + ".html";
+    var url404 = "./404card.html";       
+    var offset = $(document).scrollTop();
     
+    $('#reference').css({"margin-top": offset}).load(url,
+    function(responseText, textState, XMLHttpRequest) {
+        console.log(textState);
+        if (textState == "error")
+            $(this).load(url404);
+        $(this).stop().animate(reference_show_css, 150);
+    });
   }).mouseleave(function(event) {
-    $('#reference').hide();
+    $('#reference').stop().animate(reference_hide_css, 150);
   });
 });</script></body></html>
