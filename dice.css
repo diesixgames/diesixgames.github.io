@@ -1,0 +1,64 @@
+.diceleft {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 4px solid #000;
+}
+.diceright {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #000;
+}
+.dice1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("public/dices.png");
+  background-position: 0px 0px;
+}
+.dice2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("public/dices.png");
+  background-position: -16px 0px;
+}
+.dice3 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("public/dices.png");
+  background-position: -32px 0px;
+}
+.dice4 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("public/dices.png");
+  background-position: -48px 0px;
+}
+.dice5 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("public/dices.png");
+  background-position: -64px 0px;
+}
+.dice6 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("public/dices.png");
+  background-position: -80px 0px;
+}

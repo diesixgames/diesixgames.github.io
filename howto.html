@@ -1,4 +1,4 @@
-<!--LAYOUT VARIABLES--><!--append this block to override the variables--><!--MIXINS--><!--it is advised to use this instead of raw anchors--><!DOCTYPE html><html lang="en"><head><title>Notodeim</title><link rel="stylesheet" href="style.css" type="text/css"/><link rel="stylesheet" href="general.css" type="text/css"/><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script></head><body><!--ACTUAL CONTENTS HERE--><div class="header"><h1><a href="index.html">Notodeim</a></h1><ul class="menu"><li><a href="synopsis.html">synopsis</a></li><li><a href="howto.html">howto</a></li><li><a href="units.html">units</a></li></ul><div class="clear_both"></div></div><div class="body"><div class="contents"><p><h1 id="how-to-play">HOW TO PLAY</h1>
+<!--LAYOUT VARIABLES--><!--append this block to override the variables--><!--MIXINS--><!--it is advised to use this instead of raw anchors--><!DOCTYPE html><html lang="en"><head><title>Notodeim</title><link rel="stylesheet" href="reset.css" type="text/css"/><link rel="stylesheet" href="style.css" type="text/css"/><link rel="stylesheet" href="general.css" type="text/css"/><link rel="stylesheet" href="dice.css" type="text/css"/><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script></head><body><!--ACTUAL CONTENTS HERE--><div class="header"><h1><a href="index.html">Notodeim</a></h1><ul class="menu"><li><a href="synopsis.html">synopsis</a></li><li><a href="howto.html">howto</a></li><li><a href="units.html">units</a></li></ul><div class="clear_both"></div></div><div class="body"><div class="contents"><p><h1 id="how-to-play">HOW TO PLAY</h1>
 <h2 id="using-the-site">Using the site</h2>
 <ol>
 <li><p>The <a href="howto.html">howto</a> is a good place to reference for all the
@@ -30,39 +30,32 @@ units and general gameplays.</p>
 </li>
 <li><p>Recruit units: given a banner, you should be able to filter a
 list of available units. Each unit has a point value, as used to fit
-within the banner&#39;s limit. <br>
-Heads over to the <a href="units.html">units</a> sections for the complete references
-to all units.</p>
+within the banner&#39;s limit. <br></p>
 </li>
 <li><p>Spending gold on upgrades: upgrades are variance of a unit that can
 be allowed to be unlocked using the starting wealth.</p>
 </li>
 </ol>
-<h2 id="banner-list">Banner list</h2>
+<h2 id="encounter">Encounter</h2>
 <ol>
-<li><p>White: driven by virtue, white promote protection and colaboration.
-After all that adventures and losses, we are deemed to realize something..
-friendship?</p>
-<ul>
-<li>Unit list: <span class="ref" type="">boris</span></li>
-<li>Point limit: 22pts</li>
-<li>Starting wealth: 250gp</li>
-<li>Hope abundance: after every encounter, choose one: restore 1hit
-or restore 1pow each.</li>
-</ul>
+<li><p>At the beginnining of the encounter, <span class="ref" type="rules">roll higher</span> for combat
+order. The winner get to go first.</p>
 </li>
-<li><p>Magenta: driven by devotion, magenta promote greater cause and passion
-for faith. Magenta is held by a charismatic figure to led the party.</p>
-<ul>
-<li>Unit list: <span class="ref" type="units">Maien</span></li>
-<li>Point limit: 30pts</li>
-<li>Starting wealth: 200gp</li>
-<li>Driven by Exemplar: choose a unit to be the banner bearer, he gains
-<span class="ref" type="rules">lead by example</span>.</li>
-</ul>
+<li><p>Each player play his turn, then pass it to the other. During one&#39;s
+turn, he can opt to end it any time.</p>
 </li>
-<li><p>Platinum: driven by martial pride, platinum promote hard-earned
-victories and sacrifice. Let</p>
+<li><p>At the start of a turn, a player gain <span class="ref" type="rules">control</span> of all his
+<span class="ref" type="rules">active</span> units. When there is no unit he can control left, his turn 
+automatically end.</p>
+</li>
+<li><p>When controlling a unit, the player enter its control phase, during
+which it can <span class="ref" type="rules">move</span>, <span class="ref" type="rules">attack</span> and activate abilities. After 
+moving and attacking, the control phase ends and he lose control of that unit
+for that turn. A player can ends the control phase at will.</p>
+</li>
+<li><p>The encounter ends when any player has no unit that is not
+<span class="ref" type="rules">incapacitated</span>. Then, the player with more <span class="ref" type="rules">active</span> units win
+the encounter, otherwise, it&#39;s a draw.</p>
 </li>
 </ol>
 </p></div><div id="reference"></div><div class="clear_both"></div></div><div class="footer"><p>Copyright Diesix gattr</p></div><script>$(document).ready(function() {
